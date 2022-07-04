@@ -14,7 +14,6 @@ table {
   padding: 0 1.25rem;
 }
 .appcoin article {
-
     background-color: #e5e5e5;
   padding: 0.5rem;
   position: fixed;
@@ -26,4 +25,45 @@ table thead {
   background-color: #b51091;
   color: #fff;
   font-size: 1rem;
+
+
+}
+table thead tr th {
+  padding:20px;
+  
+}
+table tbody tr td {
+  padding: 1rem;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #cfb5cb;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons button {
+  /* width: 45%; */
+  flex: 1;
+   background-color: #b51091;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+ 
+  outline: none;
+  border-radius: 0.3rem;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.buttons button:first-child {
+  margin-right: 1rem;
 }

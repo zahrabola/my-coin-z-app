@@ -16,13 +16,24 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="row">
+              <td>1</td>
+              <td>Bitcoin</td>
+              <td>$30</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr className="row">
               <td>1</td>
               <td>Bitcoin</td>
               <td>$30</td>
             </tr>
           </tbody>
         </table>
+        <div className="buttons">
+          <button>Next</button>
+          <button>Refresh</button>
+        </div>
       </div>
     </div>
   );
