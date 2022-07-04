@@ -4,6 +4,7 @@ import './App.css';
 function App() {
 
 const [cash, setCash] = useState([])
+const[limit, setLimit] = useState(20)
 
 
 useEffect(() => {
@@ -36,14 +37,15 @@ useEffect(() => {
               <tr className="row" key={id}>
                 <td>{rank}</td>
                 <td>{name}</td>
-                <td>{priceUsd}</td>
+                <td>${parseFloat(priceUsd).toFixed(2)}</td>
                 <td>{symbol}</td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className="buttons">
-          <button>Next</button>
+          <button onClick={() => setLimit
+          (limit + 20 )}>Next</button>
           <button>Refresh</button>
         </div>
       </div>
