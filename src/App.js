@@ -9,15 +9,18 @@ const[limit, setLimit] = useState(20)
 
 useEffect(() => {
   const fetchCash =  async () => {  
-    const res = await fetch (`https://api.coincap.io/v2/assets?limit=20`)
+    const res = await fetch (`https://api.coincap.io/v2/assets?limit=${limit}`)
     const data = await res.json()
     console.log(data.data)
     setCash(data.data)
   }
   fetchCash()
-})
+}, [limit])
 
-
+const handleRefresh =() => {
+  setLimit(20)
+  window.scroll(0,0)
+}
   return (
     <div className="App">
       <h1> Zahra's Crypro App </h1>
@@ -44,9 +47,8 @@ useEffect(() => {
           </tbody>
         </table>
         <div className="buttons">
-          <button onClick={() => setLimit
-          (limit + 20 )}>Next</button>
-          <button>Refresh</button>
+          <button onClick={() => setLimit(limit + 20)}>Next</button>
+          <button nClick={handleRefresh}>Refresh</button>
         </div>
       </div>
     </div>
